@@ -118,7 +118,7 @@ export class TabbedForm extends Component {
             >
                 <Tabs
                     scrollable
-                    scrollButtons="off"
+                    scrollButtons="auto"
                     // The location pathname will contain the page path including the current tab path
                     // so we can use it as a way to determine the current tab
                     value={tabsValue}

@@ -37,7 +37,7 @@ const styles = theme => ({
     content: {
         display: 'flex',
         flexDirection: 'column',
-        flexGrow: 2,
+        flexGrow: 1,
         padding: theme.spacing.unit * 3,
         [theme.breakpoints.up('xs')]: {
             paddingLeft: 5,
@@ -45,6 +45,7 @@ const styles = theme => ({
         [theme.breakpoints.down('sm')]: {
             padding: 0,
         },
+        overflowX: 'auto',
     },
 });
 

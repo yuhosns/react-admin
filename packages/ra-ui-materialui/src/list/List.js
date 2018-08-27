@@ -31,6 +31,7 @@ const styles = {
         alignSelf: 'flex-start',
     },
     noResults: { padding: 20 },
+    tableContainer: { overflowX: 'auto' },
 };
 
 const sanitizeRestProps = ({
@@ -135,13 +136,15 @@ export const ListView = ({
                     />
                 )}
                 <div key={version}>
-                    {children &&
-                        React.cloneElement(children, {
-                            ...controllerProps,
-                            hasBulkActions:
-                                bulkActions !== false &&
-                                bulkActionButtons !== false,
-                        })}
+                    <div className={classes.tableContainer}>
+                        {children &&
+                            React.cloneElement(children, {
+                                ...controllerProps,
+                                hasBulkActions:
+                                    bulkActions !== false &&
+                                    bulkActionButtons !== false,
+                            })}
+                    </div>
                     {pagination &&
                         React.cloneElement(pagination, controllerProps)}
                 </div>
